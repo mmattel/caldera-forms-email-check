@@ -3,7 +3,7 @@
  * Plugin Name
  *
  * @package           PluginPackage
- * @author            Martin Mattel
+ * @author            mmattel
  * @copyright         2020 mmattel
  * @license           GPL-2.0-or-later
  *
