@@ -4,7 +4,7 @@
  *
  * @package           PluginPackage
  * @author            Martin Mattel
- * @copyright         2020 Martin Mattel
+ * @copyright         2020 mmattel
  * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
@@ -14,8 +14,8 @@
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
- * Author:            Martin Mattel
- * Author URI:        https://www.innovation-und-beratung.com
+ * Author:            mmattel
+ * Author URI:        https://github.com/mmattel/caldera-forms-email-check
  * Text Domain:       caldera-forms-email-domain-check
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
