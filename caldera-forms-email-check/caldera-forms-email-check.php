@@ -37,7 +37,6 @@ add_filter('caldera_forms_get_form_processors', 'email_check_cf_validator_proces
  *
  * @return array
  */
-
 function email_check_cf_validator_processor($processors){
     $processors['email_check_cf_validator'] = array(
         'name' => __('eMail Domain Check', 'caldera-forms-email-domain-check' ),
