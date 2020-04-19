@@ -5,11 +5,17 @@ Processor for eMail Domain Check for [Caldera Forms](https://calderaforms.com)
 === Caldera Forms eMail Domain Check ===
 
 Contributors: mmattel
+
 Tags: caldera forms, email, domain, dns
+
 Requires at least: 4.5
+
 Tested up to: 5.4
+
 Stable tag: 1.0
+
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 eMail Domain Check for Caldera Forms.
