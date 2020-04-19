@@ -62,6 +62,9 @@ in this sort order.
 
 == Screenshots ==
 
+![Setup](https://github.com/mmattel/caldera-forms-email-check/blob/master/caldera-forms-email-check-setup.png)
+
+![Error](https://github.com/mmattel/caldera-forms-email-check/blob/master/caldera-forms-email-check-error.png)
 
 == Changelog ==
 
