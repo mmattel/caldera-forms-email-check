@@ -1,4 +1,4 @@
-# Wordpress: CF eMail Domain Check #
+# Wordpress: eMail Domain Check for Caldera Forms #
 eMail Domain Check Processor for [Caldera Forms](https://calderaforms.com)
 
 Contributors: mmattel
