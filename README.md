@@ -68,7 +68,7 @@ in this sort order.
 
 ## Screenshots ##
 
-![Setup](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check-setup.png)
+![Settings](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check-settings.png)
 
 ![Error](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check-error.png)
 
