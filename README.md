@@ -32,9 +32,9 @@ Useful to aviod misusage or mistyped eMails without additional confirmations.
 ## Usage ##
 
 * Install and activate the plugin.
-* Define a layout including at least one eMail address field
+* Define a Caldera Form layout including at least one eMail address field
 * Go to the Caldera Form Processors tab and add this processor.
-* In Processors Settings add/select the magic eMail tag in the field. Only one per processor!
+* In Processors Settings add/select the magic eMail tag of your eMail field. Use only one tag!
 * In Processors Conditions, enable the processor.
 
 ## Frequently Asked Questions ##
