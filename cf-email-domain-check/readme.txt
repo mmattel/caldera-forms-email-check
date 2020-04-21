@@ -22,12 +22,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ### Adds an eMail domain check processor to Caldera Forms ###
 
-Check if the domain of the eMail given is most likely capable recieving eMails.
+Check if the domain of the eMail given is most likely capable recieving eMails.  
 Useful to aviod misusage or mistyped eMails without additional confirmations.
 
 ## Installation ##
 
-1. Upload the plugin files to the '/wp-content/plugins' directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the '/wp-content/plugins' directory,  
+   or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 
 ## Usage ##
