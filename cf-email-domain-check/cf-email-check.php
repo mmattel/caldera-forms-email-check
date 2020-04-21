@@ -15,7 +15,7 @@
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            mmattel
- * Author URI:        https://github.com/mmattel/cf-email-domain-check
+ * Author URI:        https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms
  * Text Domain:       cf-email-domain-check
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
