@@ -1,8 +1,6 @@
 # CF eMail Domain Check for Wordpress #
 eMail Domain Check Processor for [Caldera Forms](https://calderaforms.com)
 
-## CF eMail Domain Check ##
-
 Contributors: mmattel
 
 Tags: caldera forms, email, domain, dns
@@ -23,7 +21,7 @@ eMail Domain Check for Caldera Forms.
 
 ### Adds an eMail domain check processor to Caldera Forms ###
 
-Check if the domain of the eMail checked is most likely capable recieving eMails.
+Check if the domain of the eMail given is most likely capable recieving eMails.
 Useful to aviod misusage or mistyped eMails without additional confirmations.
 
 ## Installation ##
