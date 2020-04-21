@@ -1,5 +1,8 @@
-# Wordpress: eMail Domain Check for Caldera Forms #
-eMail Domain Check Processor for [Caldera Forms](https://calderaforms.com)
+# eMail Domain Check Processor for Caldera Forms #
+
+See the link for more Information on [Caldera Forms](https://calderaforms.com)
+
+## Development ##
 
 Contributors: mmattel
 
