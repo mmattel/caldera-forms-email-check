@@ -61,7 +61,7 @@ If the server can recieve eMails, you still can have the possibility that the re
 
 ### How is the check made ###
 
-The check is made with php checkdnsrr to look if the eMail domain returns either a valid DNS MX or A or AAAA record,
+The check is made with php `checkdnsrr` to look if the eMail domain returns either a valid DNS MX or A or AAAA record,
 in this sort order.
 
 
