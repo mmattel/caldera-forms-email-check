@@ -16,38 +16,36 @@
  * Requires PHP:      7.2
  * Author:            mmattel
  * Author URI:        https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms
- * Text Domain:       cf-email-domain-check
+ * Text Domain:       EDCCF_email_domain_text_domain
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
  
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
-load_plugin_textdomain('cf-email-domain-check', false, basename( dirname( __FILE__ ) ) . '/languages' );
+load_plugin_textdomain('EDCCF_email_domain_text_domain', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
-define('FIELD_NAME', 'eMail');
+define('EDCCF_EMAIL_DOMAIN_FIELD_NAME', 'eMail');
 
-add_filter('caldera_forms_get_form_processors', 'email_check_cf_validator_processor');
+add_filter('caldera_forms_get_form_processors', 'EDCCF_email_domain_processor');
 
 /**
  * Add a custom processor for eMail field validation
  *
- * @uses 'email_check_cf_validator_processor'
+ * @uses 'EDCCF_email_domain_processor'
  *
  * @param array $processors Processor configs
  *
  * @return array
  */
+function EDCCF_email_domain_processor($processors){
+	$processors['email_check_cf_validator'] = array(
+		'name' => __('eMail Domain Check', 'EDCCF_email_domain_text_domain' ),
+		'description' => 'Check if the eMail domain has an MX or A or AAAA record',
+		'pre_processor' => 'EDCCF_email_domain_validator',
+		'template' => dirname(__FILE__) . '/config.php'
 
-function email_check_cf_validator_processor($processors){
-    $processors['email_check_cf_validator'] = array(
-        'name' => __('eMail Domain Check', 'cf-email-domain-check' ),
-        'description' => 'Check if the eMail domain has an MX or A or AAAA record',
-        'pre_processor' => 'cf_email_check_validator',
-        'template' => dirname(__FILE__) . '/config.php'
-
-    );
-
-    return $processors;
+	);
+	return $processors;
 }
 
 
@@ -59,56 +57,57 @@ function email_check_cf_validator_processor($processors){
  *
  * @return array|void Error array if needed, else void.
  */
-function cf_email_check_validator( array $config, array $form ){
+function EDCCF_email_domain_validator( array $config, array $form ){
 
-    //Processor data object
-    $data = new Caldera_Forms_Processor_Get_Data( $config, $form, cf_email_check_validator_fields() );
+	//Processor data object
+	$data = new Caldera_Forms_Processor_Get_Data( $config, $form, EDCCF_email_domain_fields_for_validator() );
 
-    //Value of field to be validated
-    $value = $data->get_value( FIELD_NAME );
+	//Value of field to be validated
+	$value = $data->get_value( EDCCF_EMAIL_DOMAIN_FIELD_NAME );
 
-    //check if false (OK) or text (error message)
-    $has_mx = cf_email_check_has_mx( $value );
+	//check if false (OK) or text (error message)
+	$has_no_mx = EDCCF_email_domain_has_no_mx( $value );
 
-    // if there was an error, $has_mx contains the error message
-    if ( $has_mx ){
+	// if there was an error, $has_no_mx contains the error message
+	if ( $has_no_mx ){
 
-        //get ID of field to put error on
-        $fields = $data->get_fields();
-        $field_id = $fields[ FIELD_NAME ][ 'config_field' ];
+		//get ID of field to put error on
+		$fields = $data->get_fields();
+		$field_id = $fields[ EDCCF_EMAIL_DOMAIN_FIELD_NAME ][ 'config_field' ];
 
-        //Get label of field to use in error message above form
-        $field = $form[ 'fields' ][ $field_id ];
-        $label = $field[ 'label' ];
+		//Get label of field to use in error message above form
+		$field = $form[ 'fields' ][ $field_id ];
+		$label = $field[ 'label' ];
 
-        //this is error data to send back
-        return array(
-            'type' => 'error',
-            //this message will be shown above form
-            'note' => sprintf(__( 'Please Correct %s', 'cf-email-domain-check' ), $label ),
-            //Add error messages for any form field
-            'fields' => array(
-                //This error message will be shown below the field that we are validating
-                $field_id => $has_mx
-            )
-        );
-    }
+		//this is error data to send back
+		return array(
+			'type' => 'error',
+			//this message will be shown above form
+			'note' => sprintf(__( 'Please correct the %s field', 'EDCCF_email_domain_text_domain' ), $label ),
+			//Add error messages for any form field
+			'fields' => array(
+				//This error message will be shown below the field that we are validating
+				$field_id => $has_no_mx
+			)
+		);
+	}
 }
 
 
 /**
  * Check if value has an dns MX or A or AAAA record
+ * If no record can be found, the error text is returned, else false
  *
- * @return bool
+ * @return bool|string
  */
-function cf_email_check_has_mx( $value ){
-     $email_domain = substr($value, strpos($value, '@') + 1);
-     if (!checkdnsrr($email_domain, "MX")){
-        if (!(checkdnsrr($email_domain, "A")) or !(checkdnsrr($email_domain, "AAAA"))){
-           return sprintf(__( 'No eMail can be sent to the specified domain ( %s )', 'cf-email-domain-check' ), $email_domain);
-        }
-     }
-     return false;
+function EDCCF_email_domain_has_no_mx( $value ){
+	$email_domain = substr($value, strpos($value, '@') + 1);
+	if (!checkdnsrr($email_domain, "MX")){
+		if (!(checkdnsrr($email_domain, "A")) or !(checkdnsrr($email_domain, "AAAA"))){
+			return sprintf(__( 'No eMail can be sent to the specified domain ( %s )', 'EDCCF_email_domain_text_domain' ), $email_domain);
+		}
+	}
+	return false;
 }
 
 
@@ -117,14 +116,14 @@ function cf_email_check_has_mx( $value ){
  *
  * @return array
  */
-function cf_email_check_validator_fields(){
-    return array(
-        array(
-            'id' => FIELD_NAME,
-            'type' => 'text',
-            'required' => true,
-            'magic' => true,
-            'label' => __( 'Magic tag for field to validate. Use only one tag!', 'cf-email-domain-check' )
-        ),
-    );
+function EDCCF_email_domain_fields_for_validator(){
+	return array(
+		array(
+			'id' => EDCCF_EMAIL_DOMAIN_FIELD_NAME,
+			'type' => 'text',
+			'required' => true,
+			'magic' => true,
+			'label' => __( 'Magic tag for field to validate. Use only one tag!', 'EDCCF_email_domain_text_domain' )
+		),
+	);
 }
