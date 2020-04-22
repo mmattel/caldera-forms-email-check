@@ -40,10 +40,9 @@ add_filter('caldera_forms_get_form_processors', 'EDCCF_email_domain_processor');
 function EDCCF_email_domain_processor($processors){
 	$processors['email_check_cf_validator'] = array(
 		'name' => __('eMail Domain Check', 'EDCCF_email_domain_text_domain' ),
-		'description' => 'Check if the eMail domain has an MX or A or AAAA record',
+		'description' => __('Check if the eMail domain has an MX or A or AAAA record', 'EDCCF_email_domain_text_domain' ),
 		'pre_processor' => 'EDCCF_email_domain_validator',
 		'template' => dirname(__FILE__) . '/config.php'
-
 	);
 	return $processors;
 }
