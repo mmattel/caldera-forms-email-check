@@ -61,7 +61,7 @@ in this sort order.
 
 == Screenshots ==
 
-1. How to setup this plugin.
+1. How to setup this processor plugin.
 2. Error message when the eMail domain most likely can't recieve eMails.
 
 == Upgrade Notice ==
