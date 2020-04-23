@@ -1,18 +1,20 @@
-=== Plugin eMail Domain Check Processor for Caldera Forms ===
+=== eMail Domain Check Processor for Caldera Forms ===
 Contributors: mmattel01
+Donate link: https://paypal.me/pools/c/8ovfl2FW7x
 Tags: caldera forms, email, domain, dns
 Requires at least: 4.6
+Requires PHP: 5.2.4
 Tested up to: 5.4
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Check if the domain of the eMail given is most likely capable recieving eMails.  
+Processor for Caldera Forms to check if the domain of the eMail given is most likely capable recieving eMails.  
 Useful to aviod misusage or mistyped eMails without additional confirmations.
 
 == Description ==
 
-This plugin adds an eMail domain check processor to Caldera Forms.
+This plugin adds an eMail domain check processor to [Caldera Forms](https://calderaforms.com).
 It checks if the domain of the eMail given is most likely capable recieving eMails.  
 Useful to aviod misusage or mistyped eMails without additional confirmations.
 
@@ -59,12 +61,16 @@ in this sort order.
 
 == Screenshots ==
 
-cf-email-domain-check-settings.png
-cf-email-domain-check-error.png
+1. How to setup this plugin.
+2. Error message when the eMail domain most likely can't recieve eMails.
+
+== Upgrade Notice ==
+
+* Initial Release
 
 == Changelog ==
 
 = 1.0 =
 
-*Initial Release
+* Initial Release
 Tested with Caldera Forms 1.8.11
