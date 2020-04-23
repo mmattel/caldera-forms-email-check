@@ -1,4 +1,4 @@
-=== eMail Domain Check Processor for Caldera Forms ===
+=== Plugin eMail Domain Check Processor for Caldera Forms ===
 Contributors: mmattel01
 Tags: caldera forms, email, domain, dns
 Requires at least: 4.6
