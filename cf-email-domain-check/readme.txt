@@ -1,6 +1,6 @@
 === eMail Domain Check Processor for Caldera Forms ===
 Contributors: mmattel01
-Donate link: https://paypal.me/pools/c/8ovfl2FW7x
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LVM4G56LYNQNY
 Tags: caldera forms, email, domain, dns
 Requires at least: 4.6
 Requires PHP: 5.2.4
