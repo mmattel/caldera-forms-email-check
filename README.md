@@ -73,5 +73,5 @@ If the server can recieve eMails, it is still possible that the recipients name 
 
 = 1.0 =
 
-*Initial Release
+* Initial Release  
 Tested with Caldera Forms 1.8.11
