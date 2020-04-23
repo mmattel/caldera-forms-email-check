@@ -2,7 +2,8 @@
 
 ## Development ##
 
-Contributors: mmattel  
+Contributors: mmattel01  
+Donate link: https://paypal.me/pools/c/8ovfl2FW7x  
 Tags: caldera forms, email, domain, dns  
 Requires at least: 4.6  
 Requires PHP: 5.2.4  
