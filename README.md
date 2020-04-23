@@ -61,9 +61,9 @@ If the server can recieve eMails, it is still possible that the recipients name 
 
 ## Screenshots ##
 
-![Settings](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/screenshot-1.png)
+![Settings](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check/assets/screenshot-1.png)
 
-![Error](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/screenshot-2.png)
+![Error](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check/assets/screenshot-2.png)
 
 ## Upgrade Notice ##
 
