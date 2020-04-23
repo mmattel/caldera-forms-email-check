@@ -41,7 +41,7 @@ Situation, a customer wants to get in touch via a contact form with an eMail adr
 This processor checks for DNS records that point to a valid eMail server for the eMail domain given.
 With this check, you can minimize bogus domains that eg. have been mistyped or misused and no eMail can be sent/replied to.
 A requestor is enforced to check his eMail address without complex measures. Helps minimizing the misuse of the contact form.
-It is most likely but not set, that missing DNS records will prevent recieving eMails at the domain given.
+It is most likely but not set, that missing DNS records will prevent recieving eMails for the domain given.
 
 ### How is the check made ###
 
