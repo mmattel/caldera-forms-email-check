@@ -41,7 +41,12 @@ Situation, a customer wants to get in touch via a contact form with an eMail adr
 This processor checks locally for DNS records that point to a valid eMail server for the eMail domain given.
 With this check, you can minimize bogus domains that eg. have been mistyped or misused and no eMail can be sent/replied to.
 A requestor is enforced to check his eMail address without complex measures. Helps minimizing the misuse of the contact form.
-It is most likely but not set, that missing DNS records will prevent recieving eMails at the domain given.
+It is most likely but not set, that missing required DNS records will prevent recieving eMails for the domain given.
+
+= How is the check made =
+
+The check is made with php `checkdnsrr` to look if the eMail domain returns either a valid DNS MX or A or AAAA record,
+in this sort order.
 
 = Can this plugin guarantee that the eMail domain is bogus =
 
@@ -52,12 +57,7 @@ possibility that this server can process eMails.
 
 = Can this plugin guarantee eMail delivery =
 
-If the server can recieve eMails, you still can have the possibility that the recipients name is invalid.
-
-= How is the check made =
-
-The check is made with php `checkdnsrr` to look if the eMail domain returns either a valid DNS MX or A or AAAA record,
-in this sort order.
+If the server can recieve eMails, it is still possible that the recipients name is mistyped or unknown.
 
 == Screenshots ==
 
