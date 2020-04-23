@@ -1,28 +1,20 @@
 # eMail Domain Check Processor for Caldera Forms #
 
-See the link for more Information on [Caldera Forms](https://calderaforms.com)
-
 ## Development ##
 
-Contributors: mmattel
-
-Tags: caldera forms, email, domain, dns
-
-Requires at least: 4.5
-
-Tested up to: 5.4
-
-Stable tag: 1.0
-
-License: GPLv2 or later
-
+Contributors: mmattel  
+Tags: caldera forms, email, domain, dns  
+Requires at least: 4.6  
+Requires PHP: 5.2.4  
+Tested up to: 5.4  
+Stable tag: 1.0  
+License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description ##
 
-### Adds an eMail domain check processor to Caldera Forms ###
-
-Check if the domain of the eMail given is most likely capable recieving eMails.  
+This plugin adds an eMail domain check processor to [Caldera Forms](https://calderaforms.com).
+It checks if the domain of the eMail given is most likely capable recieving eMails.  
 Useful to aviod misusage or mistyped eMails without additional confirmations.
 
 ## Installation ##
@@ -50,6 +42,11 @@ With this check, you can minimize bogus domains that eg. have been mistyped or m
 A requestor is enforced to check his eMail address without complex measures. Helps minimizing the misuse of the contact form.
 It is most likely but not set, that missing DNS records will prevent recieving eMails at the domain given.
 
+### How is the check made ###
+
+The check is made with php `checkdnsrr` to look if the eMail domain returns either a valid DNS MX or A or AAAA record,
+in this sort order.
+
 ### Can this plugin guarantee that the eMail domain is bogus ###
 
 This plugin can only check if the eMail domain is likely to recieve eMails.
@@ -59,19 +56,17 @@ possibility that this server can process eMails.
 
 ### Can this plugin guarantee eMail delivery ###
 
-If the server can recieve eMails, you still can have the possibility that the recipients name is invalid.
-
-### How is the check made ###
-
-The check is made with php `checkdnsrr` to look if the eMail domain returns either a valid DNS MX or A or AAAA record,
-in this sort order.
-
+If the server can recieve eMails, it is still possible that the recipients name is mistyped or unknown.
 
 ## Screenshots ##
 
-![Settings](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check-settings.png)
+![Settings](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/screenshot-1.png)
 
-![Error](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/cf-email-domain-check-error.png)
+![Error](https://github.com/mmattel/eMail-Domain-Check-Processor-for-Caldera-Forms/blob/master/screenshot-2.png)
+
+## Upgrade Notice ##
+
+* Initial Release
 
 ## Changelog ##
 
